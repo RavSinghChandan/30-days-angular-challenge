@@ -1,0 +1,65 @@
+<div class="profile-editor">
+  <div class="editor-section">
+    <h2>Edit Profile</h2>
+    
+    <div class="form-group">
+      <label>Name:</label>
+      <input 
+        type="text" 
+        [(ngModel)]="user.name" 
+        (input)="onNameChange($event)"
+        placeholder="Enter your name">
+    </div>
+
+    <div class="form-group">
+      <label>Title:</label>
+      <input 
+        type="text" 
+        [(ngModel)]="user.title"
+        placeholder="Enter your job title">
+    </div>
+
+    <div class="form-group">
+      <label>Bio:</label>
+      <textarea 
+        [(ngModel)]="user.bio"
+        rows="4"
+        placeholder="Tell us about yourself"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Email:</label>
+      <input 
+        type="email" 
+        [(ngModel)]="user.email"
+        placeholder="Enter your email">
+    </div>
+
+    <div class="form-group">
+      <label>Location:</label>
+      <input 
+        type="text" 
+        [(ngModel)]="user.location"
+        placeholder="Enter your location">
+    </div>
+
+    <button 
+      (click)="saveProfile()" 
+      [disabled]="isLoading">
+      {{ isLoading ? 'Saving...' : 'Save Profile' }}
+    </button>
+  </div>
+
+  <div class="preview-section">
+    <h2>Live Preview</h2>
+    <div class="profile-card">
+      <h3>{{ user.name || 'Your Name' }}</h3>
+      <p class="title">{{ user.title || 'Your Title' }}</p>
+      <p class="bio">{{ user.bio || 'Your bio will appear here' }}</p>
+      <p class="email">📧 {{ user.email || 'your.email@example.com' }}</p>
+      <p class="location">📍 {{ user.location || 'Your Location' }}</p>
+    </div>
+  </div>
+</div>
+
+<h1>Hello</h1>

@@ -1,43 +1,48 @@
-<div>
-  <div>
+<div id="profile-editor" class="profile-editor">
+  <div id="editor-section" class="editor-section">
     <h2>Edit Profile</h2>
     
-    <div>
-      <label>Name:</label>
+    <div class="form-group">
+      <label for="name">Name:</label>
       <input 
+        id="name"
         type="text" 
         [(ngModel)]="user.name" 
         (input)="onNameChange($event)"
         placeholder="Enter your name">
     </div>
 
-    <div>
-      <label>Title:</label>
+    <div class="form-group">
+      <label for="title">Title:</label>
       <input 
+        id="title"
         type="text" 
         [(ngModel)]="user.title"
         placeholder="Enter your job title">
     </div>
 
-    <div>
-      <label>Bio:</label>
+    <div class="form-group">
+      <label for="bio">Bio:</label>
       <textarea 
+        id="bio"
         [(ngModel)]="user.bio"
         rows="4"
         placeholder="Tell us about yourself"></textarea>
     </div>
 
-    <div>
-      <label>Email:</label>
+    <div class="form-group">
+      <label for="email">Email:</label>
       <input 
+        id="email"
         type="email" 
         [(ngModel)]="user.email"
         placeholder="Enter your email">
     </div>
 
-    <div>
-      <label>Location:</label>
+    <div class="form-group">
+      <label for="location">Location:</label>
       <input 
+        id="location"
         type="text" 
         [(ngModel)]="user.location"
         placeholder="Enter your location">
@@ -50,16 +55,14 @@
     </button>
   </div>
 
-  <div>
+  <div id="preview-section" class="preview-section">
     <h2>Live Preview</h2>
-    <div>
+    <div id="profile-card" class="profile-card">
       <h3>{{ user.name || 'Your Name' }}</h3>
-      <p>{{ user.title || 'Your Title' }}</p>
-      <p>{{ user.bio || 'Your bio will appear here' }}</p>
-      <p>📧 {{ user.email || 'your.email@example.com' }}</p>
-      <p>📍 {{ user.location || 'Your Location' }}</p>
+      <p class="title">{{ user.title || 'Your Title' }}</p>
+      <p class="bio">{{ user.bio || 'Your bio will appear here' }}</p>
+      <p class="email">📧 {{ user.email || 'your.email@example.com' }}</p>
+      <p class="location">📍 {{ user.location || 'Your Location' }}</p>
     </div>
   </div>
 </div>
-
-<h1>Hello</h1>

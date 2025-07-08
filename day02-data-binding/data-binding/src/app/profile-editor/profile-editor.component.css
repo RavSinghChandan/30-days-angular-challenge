@@ -1,3 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.profile-editor { display: flex; }
+.editor-section, .preview-section { flex: 1; }
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+
+button {
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+}
+
+:root {
+  --primary-color: #1976d2;
+  --secondary-color: #f5f5f5;
+  --text-color: #222;
+  --muted-color: #888;
+  --border-radius: 12px;
+  --box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  --transition: background 0.2s, color 0.2s;
+}
+
+.editor-section, .preview-section {
+  flex: 1 1 320px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  min-width: 300px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.02em;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+button:disabled {
+  background: #90caf9;
+  cursor: not-allowed;
+}
+
+.profile-card {
+  background: var(--secondary-color);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.profile-card .title {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.profile-card .bio {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.profile-card .email, .profile-card .location {
+  font-size: 0.95rem;
+  color: var(--muted-color);
+}
+
+@media (max-width: 700px) {
+  .profile-editor {
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 98vw;
+  }
+}
 
 
 

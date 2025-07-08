@@ -9,21 +9,32 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './profile-editor.component.css'
 })
 export class ProfileEditorComponent {
+  // User profile object holding all editable fields
   user = {
-    name: 'John Doe',
-    title: 'Full Stack Developer',
-    bio: 'Passionate developer with 5+ years of experience.',
-    email: 'john.doe@example.com',
-    location: 'San Francisco, CA',
-    skills: ['Angular', 'TypeScript', 'Node.js']
+    name: 'John Doe', // User's name
+    title: 'Full Stack Developer', // User's job title
+    bio: 'Passionate developer with 5+ years of experience.', // Short bio
+    email: 'john.doe@example.com', // Email address
+    location: 'San Francisco, CA', // Location
+    skills: ['Angular', 'TypeScript', 'Node.js'] // List of skills
   };
 
+  // Indicates if the profile is being saved (for loading state)
   isLoading = false;
 
+  /**
+   * Handler for name input changes.
+   * Logs the new name value to the console.
+   * @param event Input event from the name field
+   */
   onNameChange(event: any) {
     console.log('Name changed to:', event.target.value);
   }
 
+  /**
+   * Simulates saving the profile (e.g., to a server).
+   * Shows a loading state and then an alert when done.
+   */
   saveProfile() {
     this.isLoading = true;
     setTimeout(() => {
@@ -32,12 +43,20 @@ export class ProfileEditorComponent {
     }, 1000);
   }
 
+  /**
+   * Adds a new skill to the user's skills array if not already present.
+   * @param skill The skill to add
+   */
   addSkill(skill: string) {
     if (skill && !this.user.skills.includes(skill)) {
       this.user.skills.push(skill);
     }
   }
 
+  /**
+   * Removes a skill from the user's skills array by index.
+   * @param index The index of the skill to remove
+   */
   removeSkill(index: number) {
     this.user.skills.splice(index, 1);
   }

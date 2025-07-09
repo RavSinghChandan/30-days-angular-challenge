@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import {CommonModule} from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,

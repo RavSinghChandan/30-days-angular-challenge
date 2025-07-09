@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './profile-editor.component.css'
 })
 export class ProfileEditorComponent {
-  // User profile object holding all editable fields
+
   user = {
     name: 'John Doe', // User's name
     title: 'Full Stack Developer', // User's job title

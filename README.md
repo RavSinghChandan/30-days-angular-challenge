@@ -145,3 +145,7 @@ This project is open source and available under the [MIT License](LICENSE).
 **Happy Coding! 🎉**
 
 Start with Day 1 and work your way through each challenge. Remember, consistency is key to mastering Angular! 
+
+---
+
+**Note:** This is a demo change for a new git commit. 

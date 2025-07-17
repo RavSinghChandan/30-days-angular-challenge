@@ -149,3 +149,5 @@ Start with Day 1 and work your way through each challenge. Remember, consistency
 ---
 
 **Note:** This is a demo change for a new git commit. 
+
+<!-- Another simple comment for demo purposes --> 
